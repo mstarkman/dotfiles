@@ -1,0 +1,19 @@
+require 'irb/completion'
+require 'irb/ext/save-history'
+
+# IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+
+# ActiveRecord::Base.logger.level = 1 if defined? ActiveRecord::Base
+
+def y(obj)
+  puts obj.to_yaml
+end
+
+class Object
+  def subl(method_name)
+    file, line = method(method_name).source_location
+    `subl -n '#{file}'`
+  end
+end

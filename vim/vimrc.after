@@ -1,0 +1,18 @@
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+vmap <leader>b <esc>:'<,'>:CoffeeCompile<CR>
+map <leader>b :CoffeeCompile<CR>
+
+" VIM powerline
+let g:Powerline_symbols = 'fancy'
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+
+autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost .vimrc.after source %
+autocmd! bufwritepost .gvimrc.after source %
+
