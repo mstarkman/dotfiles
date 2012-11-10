@@ -1,7 +1,7 @@
 color solarized
 
 if has("gui_macvim")
-  set guifont=Menlo\ for\ Powerline:h14
+  set guifont=Menlo\ Regular:h14
   macmenu &Tools.Make key=<nop>
   vmap <D-b> <esc>:'<,'>:CoffeeCompile<CR>
   map <D-b> :CoffeeCompile<CR>
