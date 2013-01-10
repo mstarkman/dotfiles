@@ -46,3 +46,10 @@ eval "$(rbenv init -)"
 export FRILLS_API_TOKEN=95db4de0f735242753283aff72247398
 export BOTZO_FRILLS_BASE_URL=http://frills.dev
 export BOTZO_FRILLS_API_TOKEN=95db4de0f735242753283aff72247398
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+export AWS_ACCESS_KEY_ID="$(/usr/bin/head -1 ~/.ec2/dev-access-key.txt)"
+export AWS_SECRET_ACCESS_KEY="$(/usr/bin/head -1 ~/.ec2/dev-secret-key.txt)"
