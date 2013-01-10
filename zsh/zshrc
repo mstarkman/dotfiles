@@ -46,3 +46,6 @@ eval "$(rbenv init -)"
 export FRILLS_API_TOKEN=95db4de0f735242753283aff72247398
 export BOTZO_FRILLS_BASE_URL=http://frills.dev
 export BOTZO_FRILLS_API_TOKEN=95db4de0f735242753283aff72247398
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
