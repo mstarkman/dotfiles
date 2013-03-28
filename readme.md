@@ -14,3 +14,7 @@
 5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
 6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
 7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
+
+## iTerm2 color scheme
+
+[Solarized](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
