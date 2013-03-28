@@ -8,7 +8,9 @@
 ## Commands to execute
 
 1. `ln -s ~/dotfiles/vim/gvimrc.after ~/.gvimrc.after`
-2. `ln -s ~/dotfiles/vim/vimrc.after ~/.vimrc.after`
-3. `ln -s ~/dotfiles/zsh/zshrc ~/.zshrc`
-4. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
-5. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
+2. `ln -s ~/dotfiles/vim/vimrc.before ~/.vimrc.before`
+3. `ln -s ~/dotfiles/vim/vimrc.after ~/.vimrc.after`
+4. `ln -s ~/dotfiles/zsh/zshrc ~/.zshrc`
+5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
+6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
+7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
