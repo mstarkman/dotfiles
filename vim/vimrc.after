@@ -3,8 +3,8 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
-vmap <leader>b <esc>:'<,'>:CoffeeCompile<CR>
-map <leader>b :CoffeeCompile<CR>
+"vmap <leader>b <esc>:'<,'>:CoffeeCompile<CR>
+"map <leader>b :CoffeeCompile<CR>
 
 " VIM powerline
 let g:Powerline_symbols = 'fancy'
