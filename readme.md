@@ -4,6 +4,7 @@
 * [Janus](https://github.com/carlhuda/janus)
 * [Janus Pre-requisites](https://github.com/carlhuda/janus)
 * MacVim - `brew install macvim`
+* Run the steps listed here: https://github.com/b4winckler/macvim/wiki/Troubleshooting#for-zsh-users
 
 ## Commands to execute
 
