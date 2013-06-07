@@ -19,3 +19,4 @@
 ## iTerm2 color scheme
 
 [Solarized](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
+
