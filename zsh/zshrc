@@ -43,6 +43,10 @@ dev() {
   cd ~/Development/"$1"
 }
 
+_dev() { _files -W ~/Development -/; }
+
+compdef _dev dev
+
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
