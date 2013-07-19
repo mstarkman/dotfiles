@@ -60,3 +60,5 @@ export PATH=$PATH:$GOPATH/bin
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
+
+set -o vi
