@@ -32,5 +32,5 @@ let g:solarized_contrast="high"
 color solarized
 
 " xmpfilter
-map <F7> <Plug>(xmpfilter-mark)
-map <F8> <Plug>(xmpfilter-run)
+map <Leader>rs <Plug>(xmpfilter-mark)
+map <Leader>rr <Plug>(xmpfilter-run)
