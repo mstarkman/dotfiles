@@ -6,6 +6,7 @@
 * MacVim - `brew install macvim`
 * Run the steps listed here: https://github.com/b4winckler/macvim/wiki/Troubleshooting#for-zsh-users
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
+* `gem install rcodetools` - This is for using [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter)
 
 ## Commands to execute
 
@@ -21,3 +22,6 @@
 
 [Solarized](https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized)
 
+## Getting VIM to work with RBENV, Ruby and Zsh
+
+[https://github.com/dotphiles/dotzsh#mac-os-x](https://github.com/dotphiles/dotzsh#mac-os-x)

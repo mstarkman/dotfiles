@@ -6,3 +6,4 @@ git clone https://github.com/tpope/vim-rails.git ~/.janus/vim-rails
 git clone https://github.com/bronson/vim-trailing-whitespace.git ~/.janus/vim-trailing-whitespace
 git clone https://github.com/mattn/zencoding-vim.git ~/.janus/zencoding-vim
 git clone https://github.com/tpope/vim-surround.git ~/.janus/vim-surround
+git clone https://github.com/t9md/vim-ruby-xmpfilter.git ~/.janus/vim-ruby-xmpfilter

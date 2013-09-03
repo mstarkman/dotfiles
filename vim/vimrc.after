@@ -31,3 +31,6 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 color solarized
 
+" xmpfilter
+map <F7> <Plug>(xmpfilter-mark)
+map <F8> <Plug>(xmpfilter-run)
