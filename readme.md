@@ -8,6 +8,7 @@
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 * `gem install rcodetools` - This is for using [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter)
 * `gem install tmuxinator`
+* [tmux-powerline](https://github.com/erikw/tmux-powerline)
 
 ## Commands to execute
 
@@ -19,6 +20,7 @@
 6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
 7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
 7. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
+7. `ln -s ~/dotfiles/tmux/tmux-powerlinerc ~/.tmux-powerlinerc`
 
 ## iTerm2 color scheme
 
