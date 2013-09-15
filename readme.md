@@ -7,6 +7,7 @@
 * Run the steps listed here: https://github.com/b4winckler/macvim/wiki/Troubleshooting#for-zsh-users
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 * `gem install rcodetools` - This is for using [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter)
+* `gem install tmuxinator`
 
 ## Commands to execute
 
@@ -17,6 +18,7 @@
 5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
 6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
 7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
+7. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 
 ## iTerm2 color scheme
 
