@@ -62,6 +62,8 @@ export PATH=$PATH:$GOPATH/bin
 # for tmuxinator
 export DISABLE_AUTO_TITLE=true
 
+ssh-add
+
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
