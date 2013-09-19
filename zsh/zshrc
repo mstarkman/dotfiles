@@ -59,6 +59,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export GOPATH=$HOME/Development/go
 export PATH=$PATH:$GOPATH/bin
 
+# for tmuxinator
+export DISABLE_AUTO_TITLE=true
+
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
