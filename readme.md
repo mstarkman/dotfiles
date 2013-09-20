@@ -12,6 +12,7 @@
 * [tmux-powerline](https://github.com/erikw/tmux-powerline)
     * `git clone https://github.com/erikw/tmux-powerline.git ~/tmux-powerline`
     * Follow other installation instructions
+* `brew install reattach-to-user-namespace`
 
 ## Commands to execute
 
