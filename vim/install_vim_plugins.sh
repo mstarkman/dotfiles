@@ -10,3 +10,5 @@ git clone https://github.com/t9md/vim-ruby-xmpfilter.git ~/.janus/vim-ruby-xmpfi
 git clone https://github.com/vim-ruby/vim-ruby ~/.janus/vim-ruby
 git clone https://github.com/nelstrom/vim-textobj-rubyblock ~/.janus/vim-text-rubyblock
 git clone https://github.com/kana/vim-textobj-user ~/.janus/vim-textobj-user
+git clone https://github.com/tpope/vim-rake ~/.janus/vim-rake
+git clone https://github.com/tpope/vim-bundler ~/.janus/vim-bundler
