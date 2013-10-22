@@ -3,6 +3,12 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+set nocompatible
+if has("autocmd")
+  filetype indent plugin on
+endif
+
+
 "vmap <leader>b <esc>:'<,'>:CoffeeCompile<CR>
 "map <leader>b :CoffeeCompile<CR>
 

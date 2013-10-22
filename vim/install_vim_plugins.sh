@@ -7,3 +7,6 @@ git clone https://github.com/bronson/vim-trailing-whitespace.git ~/.janus/vim-tr
 git clone https://github.com/mattn/zencoding-vim.git ~/.janus/zencoding-vim
 git clone https://github.com/tpope/vim-surround.git ~/.janus/vim-surround
 git clone https://github.com/t9md/vim-ruby-xmpfilter.git ~/.janus/vim-ruby-xmpfilter
+git clone https://github.com/vim-ruby/vim-ruby ~/.janus/vim-ruby
+git clone https://github.com/nelstrom/vim-textobj-rubyblock ~/.janus/vim-text-rubyblock
+git clone https://github.com/kana/vim-textobj-user ~/.janus/vim-textobj-user
