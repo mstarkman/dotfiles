@@ -26,12 +26,12 @@ ZSH_THEME="mstarkman"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew powder vagrant bundler git-flow tmux tmuxinator)
+plugins=(git brew powder vagrant rvm tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin::/usr/X11/bin
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node_modules
 
@@ -50,8 +50,8 @@ _dev() { _files -W ~/Development -/; }
 compdef _dev dev
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
