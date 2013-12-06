@@ -9,8 +9,8 @@ if has("autocmd")
 endif
 
 
-"vmap <leader>b <esc>:'<,'>:CoffeeCompile<CR>
-"map <leader>b :CoffeeCompile<CR>
+vmap <leader>bb <esc>:'<,'>:CoffeeCompile<CR>
+map <leader>bb :CoffeeCompile<CR>
 
 " VIM powerline
 let g:Powerline_symbols = 'fancy'
