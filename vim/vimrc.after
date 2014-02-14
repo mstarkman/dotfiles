@@ -40,3 +40,8 @@ color solarized
 " xmpfilter
 map <Leader>rs <Plug>(xmpfilter-mark)
 map <Leader>rr <Plug>(xmpfilter-run)
+
+let g:ctrlp_custom_ignore = {
+            \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
+            \ 'file': '\.exe$\|\.so$'
+            \ }

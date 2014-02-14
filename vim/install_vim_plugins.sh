@@ -13,3 +13,4 @@ git clone https://github.com/kana/vim-textobj-user ~/.janus/vim-textobj-user
 git clone https://github.com/tpope/vim-rake ~/.janus/vim-rake
 git clone https://github.com/tpope/vim-bundler ~/.janus/vim-bundler
 git clone https://github.com/digitaltoad/vim-jade ~/.janus/vim-jade
+git clone https://github.com/moll/vim-node ~/.janus/vim-node
