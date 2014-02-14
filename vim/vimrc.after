@@ -45,3 +45,5 @@ let g:ctrlp_custom_ignore = {
             \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
             \ 'file': '\.exe$\|\.so$'
             \ }
+
+au BufNewFile,BufRead *.ejs set filetype=html
