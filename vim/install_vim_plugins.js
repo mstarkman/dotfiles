@@ -42,7 +42,7 @@ each(plugins, function(plugin) {
     console.log("Processing " + plugin + "...");
 
     if (exists) {
-      cmdArgs = ["--git-dir=" + destinationPath + "/.git", "pull"];
+      cmdArgs = ["--git-dir=" + destinationPath + "/.git", "pull", "origin", "master"];
     }
     else {
       cmdArgs = ["clone", "https://github.com/" + plugin, destinationPath];
