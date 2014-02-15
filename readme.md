@@ -1,5 +1,7 @@
 ## What to install
 
+* `brew install git`
+* `brew install node`
 * [Oh My Zsh!](https://github.com/robbyrussell/oh-my-zsh)
 * [Janus](https://github.com/carlhuda/janus)
 * [Janus Pre-requisites](https://github.com/carlhuda/janus)
@@ -23,8 +25,9 @@
 5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
 6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
 7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
-7. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
-7. `ln -s ~/dotfiles/tmux/tmux-powerlinerc ~/.tmux-powerlinerc`
+8. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
+9. `ln -s ~/dotfiles/tmux/tmux-powerlinerc ~/.tmux-powerlinerc`
+10. `vim/install_vim_plugins.js`
 
 ## iTerm2 color scheme
 
