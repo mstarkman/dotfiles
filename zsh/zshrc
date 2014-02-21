@@ -23,15 +23,16 @@ ZSH_THEME="mstarkman"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
-
+#
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew powder vagrant rvm tmux tmuxinator)
+plugins=(git brew powder rvm tmux)
+
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node_modules
 
@@ -49,10 +50,6 @@ _dev() { _files -W ~/Development -/; }
 
 compdef _dev dev
 
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -62,10 +59,15 @@ export PATH=$PATH:$GOPATH/bin
 # for tmuxinator
 export DISABLE_AUTO_TITLE=true
 
-ssh-add
+ssh-add > /dev/null 2>&1
 
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
 
-#set -o vi
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+
+set -o vi
+
