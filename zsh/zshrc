@@ -35,9 +35,9 @@ export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr
 
 export NODE_PATH=/usr/local/lib/node_modules
 
-export EDITOR='subl -n'
+#export EDITOR='subl -n'
 #export EDITOR='mvim'
-#export EDITOR='vim'
+export EDITOR='vim'
 
 alias ls='ls -al'
 
