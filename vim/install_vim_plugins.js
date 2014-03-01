@@ -6,20 +6,24 @@ var fs = require('fs');
 var spawn = require('child_process').spawn;
 
 var plugins = [
-  'kchmck/vim-coffee-script.git',
-  'Lokaltog/vim-powerline.git',
-  'tpope/vim-rails.git',
-  'bronson/vim-trailing-whitespace.git',
-  'mattn/zencoding-vim.git',
-  'tpope/vim-surround.git',
-  't9md/vim-ruby-xmpfilter.git',
-  'vim-ruby/vim-ruby.git',
-  'nelstrom/vim-textobj-rubyblock.git',
-  'kana/vim-textobj-user.git',
-  'tpope/vim-rake.git',
-  'tpope/vim-bundler.git',
-  'digitaltoad/vim-jade.git',
-  'moll/vim-node.git',
+// 'kchmck/vim-coffee-script.git',
+// 'Lokaltog/vim-powerline.git',
+// 'tpope/vim-rails.git',
+// 'bronson/vim-trailing-whitespace.git',
+// 'mattn/zencoding-vim.git',
+// 'tpope/vim-surround.git',
+// 't9md/vim-ruby-xmpfilter.git',
+// 'vim-ruby/vim-ruby.git',
+// 'nelstrom/vim-textobj-rubyblock.git',
+// 'kana/vim-textobj-user.git',
+// 'tpope/vim-rake.git',
+// 'tpope/vim-bundler.git',
+// 'digitaltoad/vim-jade.git',
+// 'moll/vim-node.git',
+  'altercation/vim-colors-solarized.git',
+  'bling/vim-airline.git',
+  'tpope/vim-fugitive.git',
+  'airblade/vim-gitgutter'
 ];
 
 var logDataBuffer = function(dataBuffer) {
@@ -34,7 +38,7 @@ var each = function(arr, callback) {
 
 each(plugins, function(plugin) {
   var pluginName = /\w+\/(.+).git/.exec(plugin)[1];
-  var destinationPath = process.env.HOME + "/.janus/" + pluginName;
+  var destinationPath = process.env.HOME + "/.vim/bundle/" + pluginName;
 
   fs.exists(destinationPath, function(exists) {
     var cmdArgs, cmd;

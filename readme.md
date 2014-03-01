@@ -1,5 +1,7 @@
 ## What to install
 
+* vim-pathogen - https://github.com/tpope/vim-pathogen#installation
+
 * `brew install git`
 * `brew install node`
 * [Oh My Zsh!](https://github.com/robbyrussell/oh-my-zsh)
@@ -18,10 +20,10 @@
 
 ## Commands to execute
 
-1. `ln -s ~/dotfiles/vim/gvimrc.after ~/.gvimrc.after`
-2. `ln -s ~/dotfiles/vim/vimrc.before ~/.vimrc.before`
-3. `ln -s ~/dotfiles/vim/vimrc.after ~/.vimrc.after`
+1. `ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc`
+3. `ln -s ~/dotfiles/vim/vimrc ~/.vimrc`
 4. `ln -s ~/dotfiles/zsh/zshrc ~/.zshrc`
+4. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
 5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
 6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
 7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`

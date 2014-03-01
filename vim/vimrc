@@ -1,0 +1,44 @@
+" Load vim-pathogen
+execute pathogen#infect()
+
+" Generic configuration
+set nocompatible
+syntax on
+set number
+
+if has("autocmd")
+  filetype indent plugin on
+endif
+
+" Splits navigation
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" Color Scheme
+set background=dark
+if has('gui_running')
+  let g:solarized_termtrans=0
+else
+  let g:solarized_termtrans=1
+end
+let g:solarized_bold=0
+let g:solarized_visibility="high"
+let g:solarized_termcolors=256
+let g:solarized_contrast="normal"
+colorscheme solarized
+
+" Configure vim-airline
+let g:airline_theme="solarized"
+let g:airline_powerline_fonts=1
+set laststatus=2   " always show the status line
+set encoding=utf-8 " Necessary to show Unicode glyphs
+
+" Configure vim-fugitive
+nmap <silent> <leader>gb :Gblame<CR>
+nmap <silent> <leader>gs :Gstatus<CR>
+nmap <silent> <leader>gd :Gdiff<CR>
+nmap <silent> <leader>gl :Glog<CR>
+nmap <silent> <leader>gc :Gcommit<CR>
+nmap <silent> <leader>gp :Gpush<CR>
