@@ -19,11 +19,12 @@ var plugins = [
 // 'tpope/vim-rake.git',
 // 'tpope/vim-bundler.git',
 // 'digitaltoad/vim-jade.git',
-// 'moll/vim-node.git',
   'altercation/vim-colors-solarized.git',
   'bling/vim-airline.git',
   'tpope/vim-fugitive.git',
-  'airblade/vim-gitgutter'
+  'airblade/vim-gitgutter.git',
+  'scrooloose/syntastic.git',
+  'moll/vim-node.git',
 ];
 
 var logDataBuffer = function(dataBuffer) {

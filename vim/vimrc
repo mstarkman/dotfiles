@@ -42,3 +42,8 @@ nmap <silent> <leader>gd :Gdiff<CR>
 nmap <silent> <leader>gl :Glog<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>gp :Gpush<CR>
+
+" Configure vim-syntastic
+let g:syntastic_enable_signs=1
+"let g:syntastic_quiet_messages={'level': 'warnings'}
+let g:syntastic_auto_loc_list=2
