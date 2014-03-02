@@ -13,9 +13,6 @@ var plugins = [
   'scrooloose/syntastic.git',
   'moll/vim-node.git',
   'mileszs/ack.vim.git',
-  'bronson/vim-trailing-whitespace.git',
-
-  // Start reviewinga nd configuring here
   'edsono/vim-matchit.git',
   'scrooloose/nerdcommenter.git',
   'terryma/vim-multiple-cursors.git',
@@ -26,6 +23,15 @@ var plugins = [
   'honza/vim-snippets.git',
   'skalnik/vim-vroom.git',
   'kchmck/vim-coffee-script.git',
+  'tpope/vim-rails.git',
+  't9md/vim-ruby-xmpfilter.git',
+  'vim-ruby/vim-ruby.git',
+  'nelstrom/vim-textobj-rubyblock.git',
+  'kana/vim-textobj-user.git',
+  'tpope/vim-rake.git',
+  'tpope/vim-bundler.git',
+  'tpope/vim-surround.git',
+  'kien/ctrlp.vim.git'
 ];
 
 var logDataBuffer = function(dataBuffer) {
