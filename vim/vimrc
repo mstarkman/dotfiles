@@ -63,3 +63,7 @@ nmap <silent> <leader>gp :Gpush<CR>
 let g:syntastic_enable_signs=1
 "let g:syntastic_quiet_messages={'level': 'warnings'}
 let g:syntastic_auto_loc_list=2
+
+" Configure vim-coffee-script
+vmap <leader>bb <esc>:'<,'>:CoffeeCompile<CR>
+map <leader>bb :CoffeeCompile<CR>

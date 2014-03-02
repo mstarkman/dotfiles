@@ -25,6 +25,7 @@ var plugins = [
   'garbas/vim-snipmate.git',
   'honza/vim-snippets.git',
   'skalnik/vim-vroom.git',
+  'kchmck/vim-coffee-script.git',
 ];
 
 var logDataBuffer = function(dataBuffer) {

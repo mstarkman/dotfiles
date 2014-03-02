@@ -25,6 +25,7 @@
 
 1. `ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc`
 3. `ln -s ~/dotfiles/vim/vimrc ~/.vimrc`
+3. `ln -s ~/dotfiles/vim/snippets ~/.vim/snippets`
 4. `ln -s ~/dotfiles/zsh/zshrc ~/.zshrc`
 4. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
 5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
