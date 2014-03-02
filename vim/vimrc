@@ -50,6 +50,10 @@ colorscheme solarized
 let g:airline_theme="solarized"
 let g:airline_powerline_fonts=1
 set laststatus=2   " always show the status line
+let g:airline#extensions#tmuxline#enabled = 0 " turn off the theme integration with tmuxline
+
+" Configure vim-tmuxline
+let g:tmuxline_theme='nightly_fox'
 
 " Configure vim-fugitive
 nmap <silent> <leader>gb :Gblame<CR>
@@ -77,6 +81,15 @@ let g:ctrlp_custom_ignore = {
             \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
             \ 'file': '\.exe$\|\.so$'
             \ }
+
+" Configure Vroom
+let g:vroom_use_vimux=1
+
+" Configure vimux
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
 
 " Configure file types
 au BufNewFile,BufRead *.ejs set filetype=html

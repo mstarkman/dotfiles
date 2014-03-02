@@ -31,7 +31,9 @@ var plugins = [
   'tpope/vim-rake.git',
   'tpope/vim-bundler.git',
   'tpope/vim-surround.git',
-  'kien/ctrlp.vim.git'
+  'kien/ctrlp.vim.git',
+  'benmills/vimux.git',
+  'edkolev/tmuxline.vim.git'
 ];
 
 var logDataBuffer = function(dataBuffer) {
