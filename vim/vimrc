@@ -2,13 +2,30 @@
 execute pathogen#infect()
 
 " Generic configuration
-set nocompatible
 syntax on
+set nocompatible
 set number
+set ruler
+set encoding=utf-8 " Necessary to show Unicode glyphs
 
 if has("autocmd")
   filetype indent plugin on
 endif
+
+" Whitespace and tabs
+set nowrap                        " don't wrap lines
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set expandtab                     " use spaces, not tabs
+"set list                          " Show invisible characters
+set backspace=indent,eol,start    " backspace through everything in insert mode
+
+" Searching
+
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
 
 " Splits navigation
 nmap <silent> <c-k> :wincmd k<CR>
@@ -33,7 +50,6 @@ colorscheme solarized
 let g:airline_theme="solarized"
 let g:airline_powerline_fonts=1
 set laststatus=2   " always show the status line
-set encoding=utf-8 " Necessary to show Unicode glyphs
 
 " Configure vim-fugitive
 nmap <silent> <leader>gb :Gblame<CR>

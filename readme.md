@@ -1,10 +1,13 @@
 ## What to install
 
-* vim-pathogen - https://github.com/tpope/vim-pathogen#installation
-
-* `brew install git`
-* `brew install node`
+* Install git - `brew install git`
 * [Oh My Zsh!](https://github.com/robbyrussell/oh-my-zsh)
+* Install node.js - `brew install node`
+* vim-pathogen - https://github.com/tpope/vim-pathogen#installation
+* Install ack - http://betterthangrep.com/ - `brew install ack`
+
+
+
 * [Janus](https://github.com/carlhuda/janus)
 * [Janus Pre-requisites](https://github.com/carlhuda/janus)
 * MacVim - `brew install macvim`

@@ -6,25 +6,25 @@ var fs = require('fs');
 var spawn = require('child_process').spawn;
 
 var plugins = [
-// 'kchmck/vim-coffee-script.git',
-// 'Lokaltog/vim-powerline.git',
-// 'tpope/vim-rails.git',
-// 'bronson/vim-trailing-whitespace.git',
-// 'mattn/zencoding-vim.git',
-// 'tpope/vim-surround.git',
-// 't9md/vim-ruby-xmpfilter.git',
-// 'vim-ruby/vim-ruby.git',
-// 'nelstrom/vim-textobj-rubyblock.git',
-// 'kana/vim-textobj-user.git',
-// 'tpope/vim-rake.git',
-// 'tpope/vim-bundler.git',
-// 'digitaltoad/vim-jade.git',
   'altercation/vim-colors-solarized.git',
   'bling/vim-airline.git',
   'tpope/vim-fugitive.git',
   'airblade/vim-gitgutter.git',
   'scrooloose/syntastic.git',
   'moll/vim-node.git',
+  'mileszs/ack.vim.git',
+  'bronson/vim-trailing-whitespace.git',
+
+  // Start reviewinga nd configuring here
+  'edsono/vim-matchit.git',
+  'scrooloose/nerdcommenter.git',
+  'terryma/vim-multiple-cursors.git',
+  'ervandew/supertab.git',
+  'tomtom/tlib_vim.git',
+  'MarcWeber/vim-addon-mw-utils.git',
+  'garbas/vim-snipmate.git',
+  'honza/vim-snippets.git',
+  'skalnik/vim-vroom.git',
 ];
 
 var logDataBuffer = function(dataBuffer) {
