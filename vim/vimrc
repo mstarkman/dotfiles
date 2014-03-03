@@ -53,7 +53,7 @@ set laststatus=2   " always show the status line
 let g:airline#extensions#tmuxline#enabled = 0 " turn off the theme integration with tmuxline
 
 " Configure vim-tmuxline
-let g:tmuxline_theme='nightly_fox'
+let g:tmuxline_theme='iceberg'
 
 " Configure vim-fugitive
 nmap <silent> <leader>gb :Gblame<CR>
