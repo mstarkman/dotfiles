@@ -8,6 +8,7 @@
 * (optional) MacVim - `brew install macvim`
 * Run the steps listed here: https://github.com/b4winckler/macvim/wiki/Troubleshooting#for-zsh-users
 * `gem install rcodetools` - This is for using [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter)
+* Install the fonts in the `fonts` directory and make sure you terminal window is using them
 * `brew install tmux`
 * `brew install reattach-to-user-namespace`
 
