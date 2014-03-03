@@ -1,6 +1,0 @@
-if has("gui_macvim")
-  set guifont=Menlo\ Regular:h14
-  macmenu &Tools.Make key=<nop>
-  vmap <D-b> <esc>:'<,'>:CoffeeCompile<CR>
-  map <D-b> :CoffeeCompile<CR>
-endif

@@ -1,4 +1,0 @@
-call janus#disable_plugin('vimwiki')
-call janus#disable_plugin('rails')
-
-runtime macros/matchit.vim
