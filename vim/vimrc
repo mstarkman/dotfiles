@@ -27,6 +27,9 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
+" allow for %% to be the path of the current file
+cabbr <expr> %% expand('%:p:h')
+
 " Splits navigation
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
