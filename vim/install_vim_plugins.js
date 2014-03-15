@@ -34,7 +34,8 @@ var plugins = [
   'kien/ctrlp.vim.git',
   'benmills/vimux.git',
   'edkolev/tmuxline.vim.git',
-  'cakebaker/scss-syntax.vim.git'
+  'cakebaker/scss-syntax.vim.git',
+  'mattn/emmet-vim.git'
 ];
 
 var logDataBuffer = function(dataBuffer) {
