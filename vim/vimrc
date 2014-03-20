@@ -20,8 +20,11 @@ set expandtab                     " use spaces, not tabs
 "set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
 
-" Searching
+" Setup splitting where I want it
+set splitbelow
+set splitright
 
+" Searching
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
