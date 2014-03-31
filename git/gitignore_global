@@ -2,3 +2,4 @@
 .DS_Store
 .ruby-gemset
 *.swp
+.idea
