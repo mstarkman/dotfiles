@@ -18,13 +18,14 @@
 3. `ln -s ~/dotfiles/vim/vimrc ~/.vimrc`
 3. `ln -s ~/dotfiles/vim/snippets ~/.vim/snippets`
 4. `ln -s ~/dotfiles/zsh/zshrc ~/.zshrc`
-4. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
-5. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
-6. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
-7. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
-8. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
-8. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
-10. `vim/install_vim_plugins.js`
+4. `ln -s ~/dotfiles/zsh/zshenv ~/.zshenv`
+5. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
+6. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
+7. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
+8. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
+9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
+10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
+11. `vim/install_vim_plugins.js`
 
 ## iTerm2 color scheme
 

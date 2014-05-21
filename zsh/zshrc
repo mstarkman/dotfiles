@@ -28,13 +28,13 @@ ZSH_THEME="mstarkman"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew powder rvm tmux)
 
-export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export NODE_PATH=/usr/local/lib/node_modules
+#export NODE_PATH=/usr/local/lib/node_modules
 
 export EDITOR='subl -n'
 #export EDITOR='mvim'
