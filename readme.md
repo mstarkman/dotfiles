@@ -1,5 +1,6 @@
 ## What to install
 
+
 * Install git - `brew install git`
 * [Oh My Zsh!](https://github.com/robbyrussell/oh-my-zsh)
 * Install node.js - `brew install node`
