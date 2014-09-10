@@ -25,7 +25,7 @@ set splitbelow
 set splitright
 
 " Searching
-set hlsearch    " highlight matches
+" set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
@@ -90,12 +90,17 @@ let g:ctrlp_custom_ignore = {
 
 " Configure Vroom
 let g:vroom_use_vimux=1
+let g:vroom_use_bundle_exec=0
+let g:vroom_test_unit_command="testrbl" " make sure to run `gem install testrbl`
 
 " Configure vimux
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
+
+" Configure Ack
+nnoremap <leader>a :Ack 
 
 " Configure file types
 au BufNewFile,BufRead *.ejs set filetype=html
