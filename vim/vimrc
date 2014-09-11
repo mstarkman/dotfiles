@@ -12,6 +12,9 @@ if has("autocmd")
   filetype indent plugin on
 endif
 
+" remap the leader key
+let mapleader=','
+
 " Whitespace and tabs
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
