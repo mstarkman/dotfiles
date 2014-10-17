@@ -23,6 +23,7 @@
 5. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
 6. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
 7. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
+7. `ln -s ~/dotfiles/irb/pryrc ~/.pryrc`
 8. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
 9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
