@@ -112,7 +112,7 @@ map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
 
 " Configure Ack
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack! 
 let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log"
 
 " Configure file types
