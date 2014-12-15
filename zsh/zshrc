@@ -36,9 +36,9 @@ source $ZSH/oh-my-zsh.sh
 
 #export NODE_PATH=/usr/local/lib/node_modules
 
-#export EDITOR='subl -n'
+export EDITOR='subl -n'
 #export EDITOR='mvim'
-export EDITOR='vim'
+#export EDITOR='vim'
 
 alias ls='ls -al'
 
