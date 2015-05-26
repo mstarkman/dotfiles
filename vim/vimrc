@@ -60,6 +60,11 @@ endif
 " remap the leader key
 let mapleader=','
 
+" tab handling
+map <C-]> :tabnext<CR>
+map <C-[> :tabprevious<CR>
+map <C-t> :tabnew<CR>
+
 " Whitespace and tabs
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
