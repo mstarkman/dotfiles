@@ -42,9 +42,13 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'slim-template/vim-slim'
+Plugin 'scrooloose/syntastic'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'digitaltoad/vim-jade'
 "Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
-"Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 "Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
@@ -61,8 +65,8 @@ endif
 let mapleader=','
 
 " tab handling
-map <C-]> :tabnext<CR>
-map <C-[> :tabprevious<CR>
+map <C-F> :tabnext<CR>
+map <C-B> :tabprevious<CR>
 map <C-t> :tabnew<CR>
 
 " Whitespace and tabs
@@ -72,6 +76,8 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 "set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+set textwidth=0
+set wrapmargin=0
 
 " Setup splitting where I want it
 set splitbelow
@@ -103,6 +109,9 @@ nmap <silent> <c-l> :wincmd l<CR>
 " Configure ctags
 :map <F2> :echo system("git ctags")<CR>
 
+" Configure tabbar
+nmap <F8> :TagbarToggle<CR>
+
 " Configure easytags
 "set tags=./tags;
 "let g:easytags_dynamic_files = 2
@@ -114,8 +123,10 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 " Configure NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$', 'tags', '\.idea', '\.swp$']
+let NERDTreeShowHidden=1
+let NERDTreeWinSize=45
 
-" Color Scheme
 set background=dark
 if has('gui_running')
   let g:solarized_termtrans=0
@@ -178,10 +189,11 @@ map <Leader>vq :VimuxCloseRunner<CR>
 " Configure Ack
 nnoremap <leader>a :Ack! 
 nnoremap <leader>u :Ack! <C-R>=expand('<cword>')<CR><CR>
-let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log"
+let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log --ignore-dir=node_modules"
 
 " Configure file types
-au BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufReadPost *.jade set filetype=jade
 
 " Setup ignores (Taken from https://github.com/carlhuda/janus)
 " Disable output and VCS files
