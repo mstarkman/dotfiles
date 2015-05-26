@@ -3,3 +3,5 @@
 .ruby-gemset
 *.swp
 .idea
+tags
+tmp/todo.txt

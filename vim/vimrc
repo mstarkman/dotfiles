@@ -1,6 +1,3 @@
-" Load vim-pathogen
-execute pathogen#infect()
-
 " Generic configuration
 syntax on
 set nocompatible
@@ -8,6 +5,53 @@ set number
 set ruler
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set clipboard=unnamed,unnamedplus
+
+" Start Vundle
+filetype indent plugin off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mileszs/ack.vim'
+Plugin 'edsono/vim-matchit'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ervandew/supertab'
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'skalnik/vim-vroom'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'kana/vim-textobj-user'
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'slim-template/vim-slim'
+"Plugin 'xolox/vim-misc'
+"Plugin 'xolox/vim-easytags'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+" End Vundle
+
+autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost ~/dotfiles/vim/vimrc source %
 
 if has("autocmd")
   filetype indent plugin on
@@ -50,6 +94,21 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Configure ctags
+:map <F2> :echo system("git ctags")<CR>
+
+" Configure easytags
+"set tags=./tags;
+"let g:easytags_dynamic_files = 2
+"let g:easytags_async = 1
+"let g:easytags_auto_highlight = 0
+
+" Configure tagbar
+"nmap <F8> :TagbarToggle<CR>
+
+" Configure NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
 
 " Color Scheme
 set background=dark
@@ -101,7 +160,7 @@ let g:ctrlp_custom_ignore = {
             \ }
 
 " Configure Vroom
-let g:vroom_use_vimux=1
+"let g:vroom_use_vimux=1
 let g:vroom_use_bundle_exec=0
 let g:vroom_test_unit_command="testrbl" " make sure to run `gem install testrbl`
 
@@ -113,6 +172,7 @@ map <Leader>vq :VimuxCloseRunner<CR>
 
 " Configure Ack
 nnoremap <leader>a :Ack! 
+nnoremap <leader>u :Ack! <C-R>=expand('<cword>')<CR><CR>
 let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log"
 
 " Configure file types

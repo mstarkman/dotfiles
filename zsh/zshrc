@@ -36,7 +36,8 @@ source $ZSH/oh-my-zsh.sh
 
 #export NODE_PATH=/usr/local/lib/node_modules
 
-export EDITOR='subl -n'
+export EDITOR='atom -n'
+#export EDITOR='subl -n'
 #export EDITOR='mvim'
 #export EDITOR='vim'
 
@@ -51,7 +52,7 @@ _dev() { _files -W ~/Development -/; }
 compdef _dev dev
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH=$HOME/Development/go
 export PATH=$PATH:$GOPATH/bin

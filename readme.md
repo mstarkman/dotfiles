@@ -1,17 +1,18 @@
 ## What to install
 
-
 * Install git - `brew install git`
 * [Oh My Zsh!](https://github.com/robbyrussell/oh-my-zsh)
 * Install node.js - `brew install node`
-* vim-pathogen - https://github.com/tpope/vim-pathogen#installation
+* Install Vundle - https://github.com/gmarik/Vundle.vim#quick-start
 * Install ack - http://betterthangrep.com/ - `brew install ack`
+* Install ctags - http://ctags.sourceforge.net/ - `brew install ctags`
 * (optional) MacVim - `brew install macvim`
 * Run the steps listed here: https://github.com/b4winckler/macvim/wiki/Troubleshooting#for-zsh-users
 * `gem install rcodetools` - This is for using [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter)
 * Install the fonts in the `fonts` directory and make sure you terminal window is using them
-* `brew install tmux`
-* `brew install reattach-to-user-namespace`
+* (optional) `brew install tmux`
+* (optional) `brew install reattach-to-user-namespace`
+* Configure ctags following this: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 
 ## Commands to execute
 
@@ -27,6 +28,7 @@
 8. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
 9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
+11. Launch vim and run `:PluginInstall` to load the vundle plugins
 11. `vim/install_vim_plugins.js`
 
 ## iTerm2 color scheme
