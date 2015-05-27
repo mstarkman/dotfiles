@@ -50,6 +50,7 @@ Plugin 'digitaltoad/vim-jade'
 "Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 call vundle#end()
 " End Vundle
@@ -63,11 +64,6 @@ endif
 
 " remap the leader key
 let mapleader=','
-
-" tab handling
-map <C-F> :tabnext<CR>
-map <C-B> :tabprevious<CR>
-map <C-t> :tabnew<CR>
 
 " Whitespace and tabs
 set nowrap                        " don't wrap lines
