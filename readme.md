@@ -31,7 +31,6 @@
 9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
 11. Launch vim and run `:PluginInstall` to load the vundle plugins
-11. `vim/install_vim_plugins.js`
 
 ## iTerm2 color scheme
 

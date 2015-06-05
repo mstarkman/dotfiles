@@ -4,7 +4,8 @@ set nocompatible
 set number
 set ruler
 set encoding=utf-8 " Necessary to show Unicode glyphs
-set clipboard=unnamed,unnamedplus
+"set clipboard=unnamed,unnamedplus
+set shell=/bin/bash
 
 " Start Vundle
 filetype indent plugin off
@@ -51,6 +52,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'majutsushi/tagbar'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'benmills/vimux'
 
 call vundle#end()
 " End Vundle
@@ -80,10 +82,11 @@ set splitbelow
 set splitright
 
 " Searching
-" set hlsearch    " highlight matches
+"set hlsearch    " highlisht matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
+"nnoremap <silent> <F3> :nohlsearch<CR>
 
 nnoremap <Leader>sw /<C-R>=expand('<cword>')<CR><CR>
 nnoremap <Leader>sd /def <C-R>=expand('<cword>')<CR><CR>
@@ -96,6 +99,9 @@ cabbr <expr> %% expand('%:p:h')
 " set mouse=a
 " set ttymouse=xterm2
 
+" Syntax formatting
+nmap <silent> <C-c>= mtgg<S-v><S-g>='t<CR>
+
 " Splits navigation
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
@@ -103,10 +109,16 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 " Configure ctags
-:map <F2> :echo system("git ctags")<CR>
+map <F2> :echo system("git ctags")<CR>
+map <silent> <F4> :tprev<CR>
+map <silent> <F5> :tnext<CR>
 
 " Configure tabbar
 nmap <F8> :TagbarToggle<CR>
+
+" Configure buffergator
+nnoremap <silent> <C-c>p :BuffergatorMruCyclePrev<CR>
+nnoremap <silent> <C-c>n :BuffergatorMruCycleNext<CR>
 
 " Configure easytags
 "set tags=./tags;
@@ -172,9 +184,11 @@ let g:ctrlp_custom_ignore = {
             \ }
 
 " Configure Vroom
-"let g:vroom_use_vimux=1
+let g:vroom_use_vimux=1
 let g:vroom_use_bundle_exec=0
-let g:vroom_test_unit_command="testrbl" " make sure to run `gem install testrbl`
+"let g:vroom_use_spring=1
+let g:vroom_test_unit_command="testrbl -Itest" " make sure to run `gem install testrbl`
+"let g:vroom_test_unit_command="m" " make sure to run `gem install m`
 
 " Configure vimux
 map <Leader>vp :VimuxPromptCommand<CR>
@@ -185,7 +199,7 @@ map <Leader>vq :VimuxCloseRunner<CR>
 " Configure Ack
 nnoremap <leader>a :Ack! 
 nnoremap <leader>u :Ack! <C-R>=expand('<cword>')<CR><CR>
-let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log --ignore-dir=node_modules"
+let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log --ignore-dir=node_modules --ignore-dir=\.idea --ignore-file=is:tags"
 
 " Configure file types
 autocmd BufNewFile,BufRead *.ejs set filetype=html

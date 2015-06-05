@@ -1,2 +1,2 @@
 snippet logit
-	Rails.logger.debug "#{'#'*100}\n#{${0}}\n#{'#'*100}\n"
+	['#'*100, ${0}, '#'*100].each { |d| Rails.logger.debug d }
