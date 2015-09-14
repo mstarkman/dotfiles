@@ -142,10 +142,14 @@ else
   let g:solarized_termtrans=1
 end
 let g:solarized_bold=0
-let g:solarized_visibility="high"
+"let g:solarized_visibility="high"
 let g:solarized_termcolors=256
-let g:solarized_contrast="normal"
+"let g:solarized_contrast="normal"
 colorscheme solarized
+
+" to make gitgutter work with solarized
+highlight clear SignColumn
+call gitgutter#highlight#define_highlights()
 
 " Configure vim-airline
 let g:airline_theme="solarized"
