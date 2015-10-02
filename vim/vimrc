@@ -50,9 +50,10 @@ Plugin 'digitaltoad/vim-jade'
 "Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'benmills/vimux'
+"Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
 " End Vundle
@@ -107,6 +108,9 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" YouCompleteMe
+"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
 
 " Configure ctags
 map <F2> :echo system("git ctags")<CR>
@@ -203,7 +207,7 @@ map <Leader>vq :VimuxCloseRunner<CR>
 " Configure Ack
 nnoremap <leader>a :Ack! 
 nnoremap <leader>u :Ack! <C-R>=expand('<cword>')<CR><CR>
-let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=log --ignore-dir=node_modules --ignore-dir=\.idea --ignore-file=is:tags"
+let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=coverage --ignore-dir=log --ignore-dir=node_modules --ignore-dir=\.idea --ignore-file=is:tags"
 
 " Configure file types
 autocmd BufNewFile,BufRead *.ejs set filetype=html

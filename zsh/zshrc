@@ -36,10 +36,10 @@ source $ZSH/oh-my-zsh.sh
 
 #export NODE_PATH=/usr/local/lib/node_modules
 
-export EDITOR='atom -n'
+#export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-#export EDITOR='vim'
+export EDITOR='vim'
 
 alias ls='ls -al'
 
@@ -69,6 +69,7 @@ fi
 PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
-
+export BYOBU_PREFIX=$(brew --prefix)
+export BYOBU_CONFIG_DIR=~/.byobu
 #set -o vi
 

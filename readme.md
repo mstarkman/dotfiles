@@ -30,7 +30,8 @@
 8. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
 9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
-11. Launch vim and run `:PluginInstall` to load the vundle plugins
+11. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
+12. Launch vim and run `:PluginInstall` to load the vundle plugins
 
 ## iTerm2 color scheme
 
