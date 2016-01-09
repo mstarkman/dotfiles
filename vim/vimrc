@@ -5,10 +5,11 @@ set number
 set ruler
 set encoding=utf-8 " Necessary to show Unicode glyphs
 "set clipboard=unnamed,unnamedplus
-set shell=/bin/bash
+"set shellcmdflag=-ic
+set shell=/bin/zsh
 
 " Start Vundle
-filetype indent plugin off
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -24,10 +25,12 @@ Plugin 'edsono/vim-matchit'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
+
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+
 Plugin 'skalnik/vim-vroom'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
@@ -47,23 +50,18 @@ Plugin 'scrooloose/syntastic'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
-"Plugin 'xolox/vim-misc'
-"Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'benmills/vimux'
-"Plugin 'jiangmiao/auto-pairs'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
+
+filetype indent plugin on
 " End Vundle
 
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost ~/dotfiles/vim/vimrc source %
-
-if has("autocmd")
-  filetype indent plugin on
-endif
 
 " remap the leader key
 let mapleader=','
@@ -109,8 +107,8 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
-" YouCompleteMe
-"let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+" SnipMate
+
 
 " Configure ctags
 map <F2> :echo system("git ctags")<CR>
@@ -191,6 +189,8 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\.exe$\|\.so$'
             \ }
 
+let g:ctrlp_extensions = ['tag']
+
 " Configure Vroom
 let g:vroom_use_vimux=1
 let g:vroom_use_bundle_exec=0
@@ -211,6 +211,7 @@ let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tm
 
 " Configure file types
 autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufReadPost *.jade set filetype=jade
 autocmd BufNewFile,BufReadPost *.jade set filetype=jade
 
 " Setup ignores (Taken from https://github.com/carlhuda/janus)
