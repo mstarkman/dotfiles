@@ -26,7 +26,9 @@ ZSH_THEME="mstarkman"
 #
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew rvm tmux)
+#
+BUNDLED_COMMANDS=(lotus)
+plugins=(git brew rvm tmux bundler tmuxinator)
 
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 
@@ -66,10 +68,14 @@ if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
 
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-#export PATH="$HOME/.rbenv/bin:$PATH"
+#PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #eval "$(rbenv init -)"
-export BYOBU_PREFIX=$(brew --prefix)
-export BYOBU_CONFIG_DIR=~/.byobu
 #set -o vi
 
+
+export NVM_DIR="/Users/mark/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
