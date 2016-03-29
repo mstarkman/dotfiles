@@ -138,7 +138,8 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', 
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=45
 
-set background=dark
+"set background=dark
+set background=light
 if has('gui_running')
   let g:solarized_termtrans=0
 else

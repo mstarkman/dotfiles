@@ -19,3 +19,9 @@ class Object
     `subl -n '#{file}'`
   end
 end
+
+begin
+  AwesomePrint.irb!
+rescue
+end
+
