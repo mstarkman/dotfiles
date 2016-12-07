@@ -32,6 +32,8 @@ BUNDLED_COMMANDS=(lotus)
 plugins=(git brew rvm tmux bundler tmuxinator)
 
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:$HOME/Development/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,7 +46,9 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='mvim'
 export EDITOR='vim'
 
-alias ls='ls -al'
+alias ls='ls -alh'
+alias h='heroku'
+alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; say cache flushed'
 
 dev() {
   cd ~/Development/"$1"
