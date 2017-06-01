@@ -27,8 +27,8 @@ ZSH_THEME="mstarkman"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #
-UNBUNDLED_COMMANDS=(foreman spring)
-BUNDLED_COMMANDS=(lotus)
+UNBUNDLED_COMMANDS=(foreman)
+BUNDLED_COMMANDS=(lotus teaspoon)
 plugins=(git brew rvm tmux bundler tmuxinator)
 
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
@@ -49,6 +49,7 @@ export EDITOR='vim'
 alias ls='ls -alh'
 alias h='heroku'
 alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; say cache flushed'
+alias gbDA='git branch | egrep -v "(master|\*)" | xargs git branch -D'
 
 dev() {
   cd ~/Development/"$1"
@@ -79,6 +80,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #eval "$(rbenv init -)"
 #set -o vi
 
+export PATH="$PATH:`yarn global bin`"
 
 export NVM_DIR="/Users/mark/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
