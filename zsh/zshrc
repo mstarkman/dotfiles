@@ -29,7 +29,7 @@ ZSH_THEME="mstarkman"
 #
 UNBUNDLED_COMMANDS=(foreman)
 BUNDLED_COMMANDS=(lotus teaspoon)
-plugins=(git brew rvm tmux bundler tmuxinator)
+plugins=(git brew bundler docker docker-compose)
 
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -50,6 +50,7 @@ alias ls='ls -alh'
 alias h='heroku'
 alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; say cache flushed'
 alias gbDA='git branch | egrep -v "(master|\*)" | xargs git branch -D'
+alias camerafix='sudo killall VDCAssistant'
 
 dev() {
   cd ~/Development/"$1"
@@ -80,10 +81,15 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #eval "$(rbenv init -)"
 #set -o vi
 
-export PATH="$PATH:`yarn global bin`"
+#export PATH="$PATH:`#yarn global bin`"
 
-#export NVM_DIR="/Users/mark/.nvm"
+#export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+#[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
+#[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+#export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"

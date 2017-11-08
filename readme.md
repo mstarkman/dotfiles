@@ -31,7 +31,8 @@
 9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
 11. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
-12. Launch vim and run `:PluginInstall` to load the vundle plugins
+12. `ln -s ~/dotfiles/ruby/spring.rb ~/.spring.rb`
+13. Launch vim and run `:PluginInstall` to load the vundle plugins
 
 ## iTerm2 color scheme
 
@@ -40,3 +41,11 @@
 ## Getting VIM to work with RBENV, Ruby and Zsh
 
 [https://github.com/dotphiles/dotzsh#mac-os-x](https://github.com/dotphiles/dotzsh#mac-os-x)
+
+## Install RBENV
+
+1. https://github.com/rbenv/rbenv
+2. https://github.com/rbenv/rbenv-default-gems
+3. After installing RBENV, run this to make sure the proper gems get installed
+    `ln -s ~/dotfiles/ruby/default-gems ~/.rbenv/default-gems`
+

@@ -11,6 +11,8 @@ Pry::Commands.command /^$/, "repeat last command" do
 end
 
 begin
+  $LOAD_PATH << "#{Gem.dir}/gems/awesome_print-1.8.0/lib"
+  require 'awesome_print'
   AwesomePrint.pry!
 rescue
 end
