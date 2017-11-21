@@ -20,12 +20,13 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tommcdo/vim-fubitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
-Plugin 'edsono/vim-matchit'
+Plugin 'bumaociyuan/vim-matchit'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -43,7 +44,7 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'slim-template/vim-slim'
@@ -77,6 +78,11 @@ set backspace=indent,eol,start    " backspace through everything in insert mode
 set textwidth=0
 set wrapmargin=0
 
+" Folding
+set foldmethod=syntax
+set foldnestmax=3
+set foldlevelstart=20
+
 " Setup splitting where I want it
 set splitbelow
 set splitright
@@ -108,8 +114,8 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
-" SnipMate
-
+" NERDCommenter
+let g:NERDSpaceDelims = 1
 
 " Configure ctags
 map <F2> :echo system("git ctags")<CR>
@@ -170,7 +176,9 @@ nmap <silent> <leader>gs :Gstatus<CR>
 nmap <silent> <leader>gd :Gdiff<CR>
 nmap <silent> <leader>gl :Glog<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
-nmap <silent> <leader>gp :Gpush<CR>
+nmap <silent> <leader>gca :Gcommit -a<CR>
+nmap <silent> <leader>gp :Gpush origin HEAD<CR>
+nmap <silent> <leader>gpf :Gpush --force origin HEAD<CR>
 
 " Configure vim-syntastic
 let g:syntastic_enable_signs=1

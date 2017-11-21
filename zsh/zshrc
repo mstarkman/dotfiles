@@ -51,6 +51,7 @@ alias h='heroku'
 alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; say cache flushed'
 alias gbDA='git branch | egrep -v "(master|\*)" | xargs git branch -D'
 alias camerafix='sudo killall VDCAssistant'
+#alias vim='mvim -v'
 
 dev() {
   cd ~/Development/"$1"
@@ -75,6 +76,10 @@ if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
 
+if [[ -e "$HOME"/.zshrc.alias.sanebox ]] then
+  source $HOME/.zshrc.alias.sanebox
+fi
+
 #PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -93,3 +98,4 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

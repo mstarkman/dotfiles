@@ -22,17 +22,17 @@
 4. `ln -s ~/dotfiles/zsh/zshrc ~/.zshrc`
 4. `ln -s ~/dotfiles/zsh/zshenv ~/.zshenv`
 5. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
-5. `ln -s ~/dotfiles/git/git_template ~/.git_template`
-5. `ln -s ~/dotfiles/ctags/ctags ~/.ctags`
-6. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
-7. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
-7. `ln -s ~/dotfiles/irb/pryrc ~/.pryrc`
-8. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
-9. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
-10. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
-11. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
-12. `ln -s ~/dotfiles/ruby/spring.rb ~/.spring.rb`
-13. Launch vim and run `:PluginInstall` to load the vundle plugins
+6. `ln -s ~/dotfiles/git/git_template ~/.git_template`
+7. `ln -s ~/dotfiles/ctags/ctags ~/.ctags`
+8. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
+9. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
+10. `ln -s ~/dotfiles/irb/pryrc ~/.pryrc`
+11. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
+12. `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
+13. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
+14. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
+15. `ln -s ~/dotfiles/ruby/spring.rb ~/.spring.rb`
+16. Launch vim and run `:PluginInstall` to load the vundle plugins
 
 ## iTerm2 color scheme
 

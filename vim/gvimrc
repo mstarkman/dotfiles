@@ -1,5 +1,6 @@
 if has("gui_macvim")
-  set guifont=Monaco\ for\ Powerline:h14
+  set guifont=Roboto\ Mono\ Light\ for\ Powerline:h14
+  " set guifont=Monaco\ for\ Powerline:h14
   macmenu &Tools.Make key=<nop>
   vmap <D-b> <esc>:'<,'>:CoffeeCompile<CR>
   map <D-b> :CoffeeCompile<CR>
