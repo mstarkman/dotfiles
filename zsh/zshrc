@@ -44,7 +44,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-export EDITOR='vim'
+# export EDITOR='vim'
+export EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
@@ -70,7 +71,8 @@ export PATH=$PATH:$GOPATH/bin
 # for tmuxinator
 export DISABLE_AUTO_TITLE=true
 
-ssh-add > /dev/null 2>&1
+ssh-add -K > /dev/null 2>&1
+ssh-add -K ~/.ssh/ec2_ssh_key > /dev/null 2>&1
 
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local

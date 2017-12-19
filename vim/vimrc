@@ -26,7 +26,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'bumaociyuan/vim-matchit'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -56,6 +56,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'benmills/vimux'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-unimpaired'
 
 call vundle#end()
 
@@ -73,15 +74,41 @@ set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
-"set list                          " Show invisible characters
+" set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
 set textwidth=0
 set wrapmargin=0
+set cursorline
+set colorcolumn=132
+
+" Helpful command keys
+" duplicate line cmd+d
+map <D-d> yyp
+
+" cmd + number for switching tabs
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
+map <D-0> 0gt
+
+" Easy commenting
+map <D-/> <Leader>c<space>
 
 " Folding
-set foldmethod=syntax
-set foldnestmax=3
-set foldlevelstart=20
+" set foldmethod=syntax
+" set foldnestmax=3
+" set foldlevelstart=20
+
+" YouCompleteMe
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_auto_trigger = 0
 
 " Setup splitting where I want it
 set splitbelow
@@ -136,7 +163,7 @@ nnoremap <silent> <C-c>n :BuffergatorMruCycleNext<CR>
 "let g:easytags_auto_highlight = 0
 
 " Configure tagbar
-"nmap <F8> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " Configure NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
@@ -163,9 +190,32 @@ call gitgutter#highlight#define_highlights()
 
 " Configure vim-airline
 let g:airline_theme="solarized"
+"let g:airline_theme="bubblegum"
 let g:airline_powerline_fonts=1
 set laststatus=2   " always show the status line
 let g:airline#extensions#tmuxline#enabled = 0 " turn off the theme integration with tmuxline
+let g:airline_skip_empty_sections = 1
+" let spc = g:airline_symbols.space
+
+let g:airline_section_b = airline#section#create(['branch'])
+let g:airline_section_y = airline#section#create([''])
+
+let g:airline_section_z = airline#section#create(['%{g:airline_symbols.maxlinenr}', ' %l', ' of %L', ': %v'])
+let g:airline_section_y = airline#section#create([''])
+
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ }
 
 " Configure vim-tmuxline
 let g:tmuxline_theme='iceberg'
@@ -202,10 +252,11 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_extensions = ['tag']
 
 " Configure Vroom
-let g:vroom_use_vimux=1
-let g:vroom_use_bundle_exec=0
+let g:vroom_use_colors=1
+" let g:vroom_use_vimux=1
+" let g:vroom_use_bundle_exec=0
 "let g:vroom_use_spring=1
-let g:vroom_test_unit_command="testrbl -Itest" " make sure to run `gem install testrbl`
+" let g:vroom_test_unit_command="testrbl -Itest" " make sure to run `gem install testrbl`
 "let g:vroom_test_unit_command="m" " make sure to run `gem install m`
 
 " Configure vimux
