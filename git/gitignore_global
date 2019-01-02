@@ -7,3 +7,5 @@ tags
 gems.tags
 tmp/todo.txt
 .vscode
+.generators
+.rakeTasks

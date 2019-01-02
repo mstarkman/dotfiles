@@ -35,6 +35,8 @@ export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$PATH:$HOME/Development/bin
 
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -44,8 +46,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-# export EDITOR='vim'
-export EDITOR='code -n'
+export EDITOR='vim'
+#export EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
@@ -101,3 +103,17 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# set yarn binaries on path
+# must be below the .asdf source commands ^
+export PATH="$(yarn global bin):$PATH"
