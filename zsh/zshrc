@@ -55,6 +55,7 @@ alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; say ca
 alias gbDA='git branch | egrep -v "(master|\*)" | xargs git branch -D'
 alias camerafix='sudo killall VDCAssistant'
 #alias vim='mvim -v'
+alias clear-rails-cache='rm -rf tmp/cache/[0-9,A-Z,a-z][0-9,A-Z,a-z][0-9,A-Z,a-z]'
 
 dev() {
   cd ~/Development/"$1"
@@ -85,8 +86,8 @@ if [[ -e "$HOME"/.zshrc.alias.sanebox ]] then
 fi
 
 #PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #eval "$(rbenv init -)"
 #set -o vi
 

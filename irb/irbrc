@@ -13,11 +13,8 @@ def y(obj)
   puts obj.to_yaml
 end
 
-class Object
-  def subl(method_name)
-    file, line = method(method_name).source_location
-    `subl -n '#{file}'`
-  end
+def gst
+  `gst`
 end
 
 begin

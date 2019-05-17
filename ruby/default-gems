@@ -2,4 +2,3 @@ bundler
 awesome_print 1.8.0
 spring-commands-testunit 1.0.1
 gem-ctags
-rcodetools

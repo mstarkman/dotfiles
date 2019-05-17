@@ -9,3 +9,4 @@ tmp/todo.txt
 .vscode
 .generators
 .rakeTasks
+.elixir_ls

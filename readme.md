@@ -32,7 +32,9 @@
 13. `ln -s ~/dotfiles/tmux/tmuxline.conf ~/.tmuxline.conf`
 14. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
 15. `ln -s ~/dotfiles/ruby/spring.rb ~/.spring.rb`
-16. Launch vim and run `:PluginInstall` to load the vundle plugins
+16. `ln -s ~/dotfiles/ruby/default-gems ~/.default-gems`
+17. `ln -s ~/dotfiles/asdf/asdfrc ~/.asdfrc`
+18. Launch vim and run `:PluginInstall` to load the vundle plugins
 
 ## iTerm2 color scheme
 
