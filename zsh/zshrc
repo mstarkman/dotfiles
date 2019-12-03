@@ -27,7 +27,7 @@ ZSH_THEME="mstarkman"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #
-UNBUNDLED_COMMANDS=(foreman)
+UNBUNDLED_COMMANDS=(foreman spring)
 BUNDLED_COMMANDS=(lotus teaspoon)
 plugins=(git brew bundler docker docker-compose)
 
@@ -46,8 +46,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-export EDITOR='vim'
-#export EDITOR='code -n'
+#export EDITOR='vim'
+export EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
