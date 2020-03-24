@@ -24,7 +24,7 @@
 5. `ln -s ~/dotfiles/git/gitignore_global ~/.gitignore_global`
 6. `ln -s ~/dotfiles/git/git_template ~/.git_template`
 7. `ln -s ~/dotfiles/ctags/ctags ~/.ctags`
-8. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ls ~/.oh-my-zsh/themes`
+8. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ~/.oh-my-zsh/themes`
 9. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
 10. `ln -s ~/dotfiles/irb/pryrc ~/.pryrc`
 11. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`

@@ -7,7 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="kphoen"
 #ZSH_THEME="pygmalion"
-ZSH_THEME="mstarkman"
+#ZSH_THEME="mstarkman"
+ZSH_THEME="shades-of-purple"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -46,8 +47,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-#export EDITOR='vim'
-export EDITOR='code -n'
+export EDITOR='vim'
+#export EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
