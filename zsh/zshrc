@@ -47,8 +47,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-export EDITOR='vim'
-#export EDITOR='code -n'
+#export EDITOR='vim'
+export EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
@@ -69,8 +69,8 @@ compdef _dev dev
 ### Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"
 
-export GOPATH=$HOME/Development/go
-export PATH=$PATH:$GOPATH/bin
+#export GOPATH=$HOME/Development/go
+#export PATH=$PATH:$GOPATH/bin
 
 # for tmuxinator
 export DISABLE_AUTO_TITLE=true
@@ -80,10 +80,6 @@ ssh-add -K ~/.ssh/ec2_ssh_key > /dev/null 2>&1
 
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
-fi
-
-if [[ -e "$HOME"/.zshrc.alias.sanebox ]] then
-  source $HOME/.zshrc.alias.sanebox
 fi
 
 #PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
@@ -103,15 +99,15 @@ fi
 #export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
+#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+#export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+#[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+#[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
