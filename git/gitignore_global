@@ -10,4 +10,4 @@ tmp/todo.txt
 .generators
 .rakeTasks
 .elixir_ls
-
+.solargraph.yml
