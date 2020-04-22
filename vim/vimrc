@@ -17,7 +17,7 @@ Plug 'gmarik/Vundle.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
@@ -192,33 +192,16 @@ call gitgutter#highlight#define_highlights()
 " Configure vim-airline
 let g:shades_of_purple_airline = 1
 let g:airline_theme="shades_of_purple"
-" let g:airline_theme="solarized"
-"let g:airline_theme="bubblegum"
 let g:airline_powerline_fonts=1
-" set laststatus=2   " always show the status line
-let g:airline#extensions#tmuxline#enabled = 0 " turn off the theme integration with tmuxline
 let g:airline_skip_empty_sections = 1
-" let spc = g:airline_symbols.space
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
+
+let spc = g:airline_symbols.space
 let g:airline_section_b = airline#section#create(['branch'])
 let g:airline_section_y = airline#section#create([''])
-
-let g:airline_section_z = airline#section#create(['%{g:airline_symbols.maxlinenr}', ' %l', ' of %L', ': %v'])
-let g:airline_section_y = airline#section#create([''])
-
-let g:airline_mode_map = {
-    \ '__' : '-',
-    \ 'n'  : 'N',
-    \ 'i'  : 'I',
-    \ 'R'  : 'R',
-    \ 'c'  : 'C',
-    \ 'v'  : 'V',
-    \ 'V'  : 'V',
-    \ '' : 'V',
-    \ 's'  : 'S',
-    \ 'S'  : 'S',
-    \ '' : 'S',
-    \ }
+let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr', spc.'%3v'])
 
 " Configure vim-tmuxline
 let g:tmuxline_theme='iceberg'
@@ -261,7 +244,7 @@ let g:vroom_use_colors=1
 " map <Leader>vq :VimuxCloseRunner<CR>
 
 " Configure Ack
-nnoremap <leader>a :Ack! 
+nnoremap <leader>a :Ack!
 nnoremap <leader>u :Ack! <C-R>=expand('<cword>')<CR><CR>
 let g:ack_default_options = " -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=coverage --ignore-dir=log --ignore-dir=node_modules --ignore-dir=\.idea --ignore-file=is:tags"
 
@@ -381,8 +364,8 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
