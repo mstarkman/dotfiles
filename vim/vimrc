@@ -51,6 +51,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-unimpaired'
+Plug 'andys8/vim-elm-syntax'
 
 call plug#end()
 
