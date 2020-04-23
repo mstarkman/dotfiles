@@ -11,3 +11,4 @@ tmp/todo.txt
 .rakeTasks
 .elixir_ls
 .solargraph.yml
+.vimrc

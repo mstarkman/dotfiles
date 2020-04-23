@@ -47,8 +47,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='atom -n'
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
-#export EDITOR='vim'
-export EDITOR='code -n'
+export EDITOR='vim'
+#export EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
