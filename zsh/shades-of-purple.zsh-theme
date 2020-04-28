@@ -110,6 +110,8 @@ prompt_versions() {
 # Dir: current working directory.
 prompt_dir() {
   prompt_segment blue yellow '%~'
+  prompt_end
+  echo -n '\n'
   # echo $(pwd | sed -e "s,^$HOME,~," | sed "s@\(.\)[^/]*/@\1/@g")
 }
 
@@ -132,9 +134,10 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_context
-  prompt_dir
-  prompt_versions
   prompt_git
+  prompt_dir
+  CURRENT_BG='NONE'
+  prompt_versions
   prompt_end
 }
 
