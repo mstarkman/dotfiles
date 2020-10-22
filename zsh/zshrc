@@ -7,8 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="kphoen"
 #ZSH_THEME="pygmalion"
-#ZSH_THEME="mstarkman"
-ZSH_THEME="shades-of-purple"
+ZSH_THEME="mstarkman"
+#ZSH_THEME="shades-of-purple"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -30,7 +30,7 @@ ZSH_THEME="shades-of-purple"
 #
 UNBUNDLED_COMMANDS=(foreman spring)
 BUNDLED_COMMANDS=(lotus teaspoon)
-plugins=(git brew bundler docker docker-compose)
+plugins=(git brew bundler docker docker-compose kubectl)
 
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -69,8 +69,8 @@ compdef _dev dev
 ### Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"
 
-#export GOPATH=$HOME/Development/go
-#export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/Development/go
+export PATH=$PATH:$GOPATH/bin
 
 # for tmuxinator
 export DISABLE_AUTO_TITLE=true
@@ -115,3 +115,15 @@ fi
 # set yarn binaries on path
 # must be below the .asdf source commands ^
 export PATH="$(yarn global bin):$PATH"
+
+# Github signing of commits
+export GPG_TTY=$(tty)
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+if [[ -e "$HOME"/Development/vault-env ]] then
+  export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault-env
+fi
+

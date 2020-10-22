@@ -93,7 +93,7 @@ prompt_git() {
 }
 
 prompt_ruby_version() {
-  ZSH_THEME_RUBY_VERSION=$(asdf current ruby | awk '{FS=" ";print $1}')
+  ZSH_THEME_RUBY_VERSION=$(asdf current ruby | head -n 1 | awk '{FS=" ";print $1}')
   prompt_segment red yellow "r$ZSH_THEME_RUBY_VERSION"
 }
 
