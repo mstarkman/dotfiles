@@ -48,7 +48,8 @@ source $ZSH/oh-my-zsh.sh
 #export EDITOR='subl -n'
 #export EDITOR='mvim'
 #export EDITOR='vim'
-export EDITOR='code -n'
+export EDITOR='code -w'
+export BUNDLER_EDITOR='code -n'
 
 alias ls='ls -alh'
 alias h='heroku'
