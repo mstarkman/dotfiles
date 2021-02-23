@@ -124,6 +124,10 @@ export GPG_TTY=$(tty)
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
+# configure starship
+export STARSHIP_CONFIG=~/.config/starship.toml
+eval "$(starship init zsh)"
+
 if [[ -e "$HOME"/Development/vault-env ]] then
   export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault-env
 fi
