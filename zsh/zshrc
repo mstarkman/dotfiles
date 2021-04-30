@@ -32,10 +32,6 @@ UNBUNDLED_COMMANDS=(foreman spring)
 BUNDLED_COMMANDS=(lotus teaspoon)
 plugins=(git brew bundler docker docker-compose kubectl)
 
-export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-export PATH=$PATH:$HOME/Development/bin
-
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 
 source $ZSH/oh-my-zsh.sh
@@ -58,6 +54,7 @@ alias gbDA='git branch | egrep -v "(master|\*)" | xargs git branch -D'
 alias camerafix='sudo killall VDCAssistant'
 #alias vim='mvim -v'
 alias clear-rails-cache='rm -rf tmp/cache/[0-9,A-Z,a-z][0-9,A-Z,a-z][0-9,A-Z,a-z]'
+alias t='/usr/local/bin/tilt'
 
 dev() {
   cd ~/Development/"$1"
@@ -110,9 +107,6 @@ fi
 # uninstall by removing these lines or running `tabtab uninstall sls`
 #[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 # set yarn binaries on path
 # must be below the .asdf source commands ^
 export PATH="$(yarn global bin):$PATH"
@@ -131,4 +125,12 @@ eval "$(starship init zsh)"
 if [[ -e "$HOME"/Development/vault-env ]] then
   export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault-env
 fi
+
+export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:$HOME/Development/bin
 
