@@ -12,3 +12,4 @@ tmp/todo.txt
 .elixir_ls
 .solargraph.yml
 .vimrc
+.tool-versions
