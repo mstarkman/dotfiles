@@ -23,3 +23,12 @@ ssh_only = false
 
 [username]
 show_always = true
+
+[docker_context]
+disabled = true
+
+# [ruby]
+# disabled = true
+
+# [nodejs]
+# disabled = true

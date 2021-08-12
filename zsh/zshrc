@@ -10,29 +10,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mstarkman"
 #ZSH_THEME="shades-of-purple"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-#
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-#
 UNBUNDLED_COMMANDS=(foreman spring)
-BUNDLED_COMMANDS=(lotus teaspoon)
-plugins=(git brew bundler docker docker-compose kubectl)
+plugins=(asdf git brew bundler docker docker-compose rbenv)
 
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,13 +30,7 @@ export EDITOR='code -w'
 export BUNDLER_EDITOR='code -n'
 
 alias ls='ls -alh'
-alias h='heroku'
 alias fdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; say cache flushed'
-alias gbDA='git branch | egrep -v "(master|\*)" | xargs git branch -D'
-alias camerafix='sudo killall VDCAssistant'
-#alias vim='mvim -v'
-alias clear-rails-cache='rm -rf tmp/cache/[0-9,A-Z,a-z][0-9,A-Z,a-z][0-9,A-Z,a-z]'
-alias t='/usr/local/bin/tilt'
 
 dev() {
   cd ~/Development/"$1"
@@ -74,46 +50,19 @@ export PATH=$PATH:$GOPATH/bin
 export DISABLE_AUTO_TITLE=true
 
 ssh-add -K > /dev/null 2>&1
-ssh-add -K ~/.ssh/ec2_ssh_key > /dev/null 2>&1
 
 if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
 
-#PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-#eval "$(rbenv init -)"
-#set -o vi
-
-#export PATH="$PATH:`#yarn global bin`"
-
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-#[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
-#[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
-#export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-#export PATH="/usr/local/opt/sqlite/bin:$PATH"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-#[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-#[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-# set yarn binaries on path
-# must be below the .asdf source commands ^
+# Yarn
 export PATH="$(yarn global bin):$PATH"
 
 # Github signing of commits
 export GPG_TTY=$(tty)
-
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
@@ -121,15 +70,6 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 # configure starship
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
-
-if [[ -e "$HOME"/Development/vault-env ]] then
-  export ANSIBLE_VAULT_PASSWORD_FILE=~/Development/vault-env
-fi
-
-export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$PATH:$HOME/Development/bin
