@@ -23,6 +23,7 @@ $memory_usage\
 $aws\
 $gcloud\
 $cmd_duration\
+$kubernetes\
 $line_break\
 $status\
 ${custom.insopshub}\
@@ -44,6 +45,12 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[kubernetes]
+disabled = false
+
+[kubernetes.context_aliases]
+"(?P<env>.*)-inst-api-gateway-deployer" = "$env-instapig"
 
 [hostname]
 ssh_only = false
