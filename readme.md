@@ -20,17 +20,18 @@
 7. `ln -s ~/dotfiles/git/git_template ~/.git_template`
 8. `ln -s ~/dotfiles/ctags/ctags ~/.ctags`
 9. `ln -s ~/dotfiles/zsh/mstarkman.zsh-theme ~/.oh-my-zsh/themes`
-10. `ln -s ~/dotfiles/zsh/shades-of-purple.zsh-theme ~/.oh-my-zsh/themes`
-11. `ln -s ~/dotfiles/zsh/starship.toml ~/.config`
-12. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
-13. `ln -s ~/dotfiles/irb/pryrc ~/.pryrc`
-14. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
-15. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
-16. `ln -s ~/dotfiles/ruby/spring.rb ~/.spring.rb`
+10. `ln -s ~/dotfiles/zsh/custom/mutagen-compose ~/.oh-my-zsh/custom/plugins`
+11. `ln -s ~/dotfiles/zsh/shades-of-purple.zsh-theme ~/.oh-my-zsh/themes`
+12. `ln -s ~/dotfiles/zsh/starship.toml ~/.config`
+13. `ln -s ~/dotfiles/irb/irbrc ~/.irbrc`
+14. `ln -s ~/dotfiles/irb/pryrc ~/.pryrc`
+15. `ln -s ~/dotfiles/gem/gemrc ~/.gemrc`
+16. `ln -s ~/dotfiles/ack/ackrc ~/.ackrc`
+17. `ln -s ~/dotfiles/ruby/spring.rb ~/.spring.rb`
 17. `ln -s ~/dotfiles/ruby/default-gems ~/.default-gems`
-18. `ln -s ~/dotfiles/asdf/asdfrc ~/.asdfrc`
-19. Launch vim and run `:PlugInstall` to load the Plug plugins
-20. `git config --global core.excludesfile '~/.gitignore_global'`
+19. `ln -s ~/dotfiles/asdf/asdfrc ~/.asdfrc`
+20. Launch vim and run `:PlugInstall` to load the Plug plugins
+21. `git config --global core.excludesfile '~/.gitignore_global'`
 
 ## iTerm2 color scheme
 

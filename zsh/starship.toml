@@ -22,8 +22,8 @@ $terraform\
 $memory_usage\
 $aws\
 $gcloud\
-$cmd_duration\
 $kubernetes\
+$cmd_duration\
 $line_break\
 $status\
 ${custom.insopshub}\
@@ -51,6 +51,7 @@ disabled = false
 
 [kubernetes.context_aliases]
 "(?P<env>.*)-inst-api-gateway-deployer" = "$env-instapig"
+"inseng-(?P<airport>.*)-inst-api-gateway-(?P<env>.*)-deployer" = "$airport-$env-instapig"
 
 [hostname]
 ssh_only = false

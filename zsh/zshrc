@@ -11,7 +11,7 @@ ZSH_THEME="mstarkman"
 #ZSH_THEME="shades-of-purple"
 
 UNBUNDLED_COMMANDS=(foreman spring)
-plugins=(asdf git brew bundler docker docker-compose rbenv kubectl)
+plugins=(asdf git brew bundler docker docker-compose rbenv kubectl mutagen-compose)
 
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
