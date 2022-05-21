@@ -39,6 +39,7 @@ error_symbol = "[➜](bold red)"
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = false
+style = "cyan"
 
 [aws]
 disabled = true
@@ -47,21 +48,27 @@ disabled = true
 disabled = true
 
 [kubernetes]
-disabled = false
+disabled = true
 
 [kubernetes.context_aliases]
+disabled = true
 "(?P<env>.*)-inst-api-gateway-deployer" = "$env-instapig"
 "inseng-(?P<airport>.*)-inst-api-gateway-(?P<env>.*)-deployer" = "$airport-$env-instapig"
 
 [hostname]
 ssh_only = false
+style = "dimmed green"
 
 [username]
 show_always = true
+style_user = "yellow"
 
 [docker_context]
 disabled = true
 format = "via [$symbol$context](blue bold) "
+
+[git_branch]
+style = "blue"
 
 [status]
 disabled = false

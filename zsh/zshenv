@@ -1,1 +1,2 @@
 #source ~/.nvm/nvm.sh
+source "/Users/mark.starkman/.rover/env"

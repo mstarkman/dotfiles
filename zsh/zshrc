@@ -74,3 +74,4 @@ eval "$(starship init zsh)"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$PATH:$HOME/Development/bin
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

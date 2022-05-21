@@ -4,10 +4,9 @@
 - [Oh My Zsh!](https://github.com/robbyrussell/oh-my-zsh)
 - Install [asdf](https://asdf-vm.com/#/core-manage-asdf-vm)
 - Install Plug - https://github.com/junegunn/vim-plug#unix
-- Install ack - http://betterthangrep.com/ - `brew install ack`
-- Install ctags - http://ctags.sourceforge.net/ - `brew install ctags`
-- Configure ctags following this: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 - Install [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font
+- Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) - `brew install the_silver_searcher`
+- Install [fzf](https://github.com/junegunn/fzf) - `brew install fzf`
 
 ## Commands to execute
 
@@ -31,7 +30,8 @@
 17. `ln -s ~/dotfiles/ruby/default-gems ~/.default-gems`
 19. `ln -s ~/dotfiles/asdf/asdfrc ~/.asdfrc`
 20. Launch vim and run `:PlugInstall` to load the Plug plugins
-21. `git config --global core.excludesfile '~/.gitignore_global'`
+21. Launch vim and run `:CocInstall coc-solargraph` to add ruby code completion
+22. `git config --global core.excludesfile '~/.gitignore_global'`
 
 ## iTerm2 color scheme
 
