@@ -1,2 +1,5 @@
 #source ~/.nvm/nvm.sh
-source "/Users/mark.starkman/.rover/env"
+
+if [[ -e "$HOME"/.rover/env ]] then
+  source $HOME/.rover/env
+fi
