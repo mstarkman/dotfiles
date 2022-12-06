@@ -140,3 +140,13 @@ set secure " https://andrew.stwrt.ca/posts/project-specific-vimrc/
 
 " SnipMate
 let g:snipMate = { 'snippet_version' : 1 }
+
+" Tab management for VS Code
+" switch tabs (same as gt & gT)
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+
+" (bonus) move tabls right or left
+map <C-h> :execute "tabmove" tabpagenr() - 2 <CR>
+map <C-l> :execute "tabmove" tabpagenr() + 1 <CR>
+
