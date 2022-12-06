@@ -11,7 +11,7 @@ ZSH_THEME="mstarkman"
 #ZSH_THEME="shades-of-purple"
 
 UNBUNDLED_COMMANDS=(foreman spring)
-plugins=(asdf git brew bundler docker docker-compose rbenv kubectl mutagen-compose)
+plugins=(asdf git brew bundler docker docker-compose rbenv kubectl)
 
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 export PATH=/usr/local/bin:/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
@@ -55,6 +55,12 @@ if [[ -e "$HOME"/.zshrc.local ]] then
   source $HOME/.zshrc.local
 fi
 
+if [[ -e "$HOME"/.config/deno/_completions ]] then
+  fpath=(~/.config/deno $fpath)
+  autoload -Uz compinit
+  compinit -u
+fi
+
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -75,3 +81,8 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$PATH:$HOME/Development/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if which dip &> /dev/null
+then
+  eval "$(dip console)"
+fi

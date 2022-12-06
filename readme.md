@@ -6,7 +6,7 @@
 - Install Plug - https://github.com/junegunn/vim-plug#unix
 - Install [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font
 - Install [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) - `brew install the_silver_searcher`
-- Install [fzf](https://github.com/junegunn/fzf) - `brew install fzf`
+- Install [fzf](https://github.com/junegunn/fzf#using-homebrew)
 
 ## Commands to execute
 
