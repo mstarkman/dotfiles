@@ -81,8 +81,8 @@ command = "echo $VAULTED_ENV"
 format = "$output "
 when = "test -v VAULTED_ENV"
 
-# [ruby]
-# disabled = true
+[ruby]
+disabled = true
 
-# [nodejs]
-# disabled = true
+[nodejs]
+disabled = true
